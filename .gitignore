@@ -1,17 +1,5 @@
-Simple Examples/Bai01/index.html
-Simple Examples/Bai01/workspace.code-workspace
-Simple Examples/Bai01/.vscode/settings.json
-Simple Examples/Bai01/asset/css/style.css
-Simple Examples/Bai02/index.html
-Simple Examples/Bai02/style.css
-Simple Examples/Bai02/.vscode/settings.json
-Simple Examples/Bai03/index.html
-Simple Examples/Bai03/.vscode/settings.json
-Simple Examples/Bai03/asset/css/style.css
-Simple Examples/Bai03/asset/img/bi.jpg
-Advanced exercises/Button/index.html
-Advanced exercises/Button/style.css
-Advanced exercises/LearnFlexBox/index.html
-Advanced exercises/LearnFlexBox/style.css
-Advanced exercises/LearnFlexBox/style.css.map
-Advanced exercises/LearnFlexBox/style.scss
+Simple Examples/**
+Advanced exercises/Button/**
+Advanced exercises/LearnFlexBox/**
+
+# Cách truy vấn https://git-scm.com/docs/gitignore
