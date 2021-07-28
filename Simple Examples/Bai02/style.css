@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mukta Vaani', sans-serif;
+    text-transform: uppercase;
+}
+
+/* -------HEADER------ */
+
+.main {
+    width: 500px;
+    height: 200px;
+}
+
+
+.cap h2 {
+    border-bottom: 4px solid #000;
+    margin-bottom: 10px;
+}
+
+.cap span {
+    background-color: #000;
+    padding: 1px 14px;
+    color: rgb(240, 195, 35);
+}
+
+/* ------CONTENT----- */
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    /* padding: 10px 10px; */
+}
+
+.logo li {
+    display: inline-block;
+    margin-right: 20px;
+}
+.logo li:last-child {
+    margin-right: 0;
+}
+
+.box {
+    text-align: center;
+    width: 150px;
+    height: 146px;
+    padding-top: 10px;
+}
+
+.logo #facebook {
+    background-color: #2e4f70;
+}
+.logo #twitter {
+    background-color: #3498db;
+}
+.logo #google {
+    background-color: #e74c3c;
+}
+
+.logo .fab {
+    font-size: 70px;
+    margin-bottom: 8px;
+}
+
+.content .text {
+    font-size: 22px;
+}
