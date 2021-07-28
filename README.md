@@ -1,6 +1,5 @@
 ## How to push code to github
-dir -> git status -> git add . -> git commit -m "" -> git push
-
+dir -> git status -> git add . -> git commit -m "" -> git push/ git push origin <branch-name>
 
 ## The first time use git
 ```
