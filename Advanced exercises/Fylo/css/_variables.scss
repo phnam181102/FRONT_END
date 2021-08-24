@@ -1,0 +1,41 @@
+// Fonts
+$font-title: "Raleway", sans-serif;
+$font-body: "Open Sans", sans-serif;
+
+// Colors
+$introBg: #1b2330;
+$mainBg: #181f2b;
+$footerBg: #0a1423;
+$testimonialBg: #20293b;
+$ctaCyan: #64e1d9;
+$ctaBlue: #329ecc;
+$grayishBlue: hsl(229, 18%, 81%);
+
+// Borders
+$border-radius: 10px;
+$border-radius-circle: 30px;
+
+$breakpoints-up: (
+  "medium": "40em",
+  "large": "64em",
+  "xlarge": "87.5em",
+);
+
+// 639px, 1023px, 1399px
+$breakpoints-down: (
+  "small": "39.3975em",
+  "medium": "63.9375em",
+  "large": "87.4375em",
+);
+
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}

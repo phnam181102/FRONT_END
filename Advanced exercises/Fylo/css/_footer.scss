@@ -1,0 +1,157 @@
+.footer {
+  background-color: $footerBg;
+  font-size: 1rem;
+  padding-top: 200px;
+
+  a:hover {
+    text-decoration: underline;
+    text-decoration-color: $ctaBlue;
+  }
+
+  .container {
+    display: grid;
+    grid-row-gap: 35px;
+    grid-column-gap: 0px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "logo" "address" "contact" "links1" "links2" "social";
+
+    @include breakpoint-up(medium) {
+      grid-column-gap: 25px;
+    }
+
+    @include breakpoint-up(large) {
+      grid-column-gap: 35px;
+      grid-template-columns: 3fr 2fr 2fr 2fr auto;
+      grid-template-rows: 60px 1fr;
+      grid-template-areas: "logo logo logo logo logo" "address contact links1 links2 social";
+    }
+
+    @include breakpoint-up(xlarge) {
+      grid-column-gap: 60px;
+    }
+  }
+
+  &__logo {
+    @include breakpoint-up(large) {
+      grid-area: logo;
+    }
+  }
+
+  &__address {
+    grid-area: address;
+    display: flex;
+
+    svg {
+      flex: 0 0 13px;
+      margin-top: 3px;
+      margin-right: 20px;
+    }
+
+    @include breakpoint-down(small) {
+      max-width: 80vw;
+    }
+  }
+
+  &__contact {
+    grid-area: contact;
+
+    @include breakpoint-up(large) {
+      justify-self: center;
+    }
+
+    a {
+      font-size: 0.875rem;
+    }
+
+    &-phone,
+    &-email {
+      display: flex;
+    }
+
+    &-phone {
+      margin-bottom: 20px;
+    }
+
+    &-phone svg {
+      width: 18px;
+      margin-right: 20px;
+    }
+
+    &-email svg {
+      width: 20px;
+      margin-right: 20px;
+    }
+  }
+
+  &__links1,
+  &__links2 {
+    a {
+      display: block;
+      margin-bottom: 20px;
+
+      @include breakpoint-down(small) {
+        margin-bottom: 0;
+        text-align: center;
+        line-height: 3;
+        width: 100%;
+      }
+    }
+  }
+
+  &__links1 {
+    grid-area: links1;
+
+    @include breakpoint-down(medium) {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    @include breakpoint-up(large) {
+      justify-self: center;
+    }
+  }
+
+  &__links2 {
+    grid-area: links2;
+
+    @include breakpoint-down(medium) {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    @include breakpoint-up(large) {
+      justify-self: center;
+    }
+  }
+
+  &__social {
+    grid-area: social;
+    justify-self: center;
+    margin-right: -16px;
+
+    a {
+      padding-right: 16px;
+    }
+
+    @include breakpoint-up(medium) {
+      justify-self: center;
+    }
+
+    svg {
+      width: 35px;
+      height: 35px;
+      border: 1px solid #ffffff;
+      border-radius: 50%;
+      padding: 8px;
+      fill: #ffffff;
+      transition: all 150ms ease-in-out;
+
+      &:hover {
+        background: linear-gradient(to right, $ctaCyan, $ctaBlue);
+        fill: $footerBg;
+      }
+    }
+  }
+}

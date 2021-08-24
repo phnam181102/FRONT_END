@@ -6,7 +6,7 @@ dir -> git status -> git add . -> git commit -m "" -> git push/ git push origin 
 $ git init
 $ git checkout -b <master>
 $ git add .
-$ git remote set-url origin https://github.com/phnam181102/FRONT_END.git
+$ git remote add origin https://github.com/phnam181102/FRONT_END.git
 $ git commit -m ""
 $ git push origin <master>
 ```

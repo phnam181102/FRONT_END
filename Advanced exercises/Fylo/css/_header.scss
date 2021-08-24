@@ -1,0 +1,57 @@
+.header {
+  display: grid;
+  grid-template-columns: minmax(100px, 1fr) repeat(3, auto);
+  grid-gap: 20px;
+  align-items: center;
+  background-color: $mainBg;
+  padding: 20px;
+
+  @include breakpoint-up(large) {
+    padding: 30px 120px 20px;
+    grid-gap: 56px;
+  }
+
+  &__logo {
+    img {
+      width: 83px;
+
+      @include breakpoint-up(large) {
+        width: 8.8125rem;
+        height: 100%;
+      }
+    }
+
+    @include breakpoint-down(small) {
+      line-height: 0.8;
+    }
+  }
+
+  a {
+    position: relative;
+    font-size: 0.875rem;
+
+    @include breakpoint-up(large) {
+      font-size: 1rem;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 3px;
+      right: 0;
+      left: 0;
+      bottom: -20px;
+      background: linear-gradient(to right, $ctaCyan, $ctaBlue);
+      opacity: 0;
+      transition: opacity 300ms ease-in-out;
+    }
+    &:hover {
+      color: $grayishBlue;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+}

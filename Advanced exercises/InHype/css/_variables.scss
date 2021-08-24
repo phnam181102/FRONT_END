@@ -1,0 +1,37 @@
+// Colors
+$text-color: #0f0e0e;
+$gray: #9f9f9f;
+$white: #fff;
+$themeColor: #4200ff;
+
+// Font Sizes
+$font-sm: 0.75rem;
+$font-med: 0.875rem;
+$font-lg: 1rem;
+$font-xlg: 1.375rem;
+
+//Reponsive
+$breakpoints-up: (
+  "medium": "40em",
+  "large": "64em",
+  "xlarge": "87.5em",
+);
+
+// 639px, 1023px, 1399px
+$breakpoints-down: (
+  "small": "48em",
+  "medium": "62em",
+  "large": "87.4375em",
+);
+
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}
